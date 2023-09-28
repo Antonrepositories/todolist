@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #1a1a1c;
+  color: #fff;
+}
+
+.to-do{
+    width: 100%;
+    max-width: 650px;
+    background: #28104e;
+    margin: 110px auto 20px;
+    padding: 40px 35px 65px;
+    border-radius: 8px;
+}
+.to-do h2{
+    display: flex;
+    color: #fa5d0f;
+    background-color: #28104e;
+    margin-bottom: 25px;
+}
+.to-do img{
+    width: 25px;
+    height: 25px;
+    background-color: #28104e;
+    margin-left: 15px;
+    color: #fa5d0f;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 30px;
+    margin-bottom: 25px;
+    padding-left: 15px;
+}
+.row input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 15px;
+    color: black;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.row button{
+    border: none;
+    outline: none;
+    padding: 15px 30px;
+    color: #fff;
+    background: #fa5d0f;
+    border-radius: 40px;
+    font-size: 17px;
+    cursor: pointer;
+}
+ul{
+    background-color: #28104e;
+}
+
+ul li{
+    font-size: 17px;
+    padding: 12px 10px 12px 50px;
+    user-select: none;
+    list-style: none;
+    cursor: pointer;
+    background-color: #fff;
+    color: black;
+    border-radius: 12px;
+    position: relative;
+    margin-bottom: 15px;
+}
+ul li::before{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    content: '';
+    background-image: url("https://e7.pngegg.com/pngimages/700/939/png-clipart-checkbox-check-mark-button-rectangle-monochrome-thumbnail.png");
+    color: black;
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 10px;   
+}
+
+ul li.checked{
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url("https://e7.pngegg.com/pngimages/919/919/png-clipart-checkbox-check-mark-green-checkbox-s-text-rectangle-thumbnail.png");
+}
+ul li span{
+    position: absolute;
+    top: 8px;
+    font-size: 21px;
+    width: 30px;
+    height: 30px;
+    color: black;
+    text-align: center;
+    background-color: #fff;
+    font-weight: bold;
+    line-height: 30px;
+    right: 10px;
+    border-radius: 5px;
+}
+ul li span:hover{
+    background-color: gray;
+}
+
