@@ -8,6 +8,8 @@ function Add(){
     else{
         let li = document.createElement("li");
         li.innerHTML = text_in.value;
+        //
+        //
         taskList.appendChild(li);
         let del = document.createElement("span");
         del.innerHTML = "\u00d7";
@@ -29,8 +31,16 @@ taskList.addEventListener("click", function(a){
 
 function saveList(){
     localStorage.setItem("tasklist", taskList.innerHTML);
+    localStorage.setItem("tasklist_updated", Date.now().toString());
 }
 function unloadList(){
     taskList.innerHTML = localStorage.getItem("tasklist");
 }
 unloadList()
+window.addEventListener("storage", function (event) {
+    if (event.key === "tasklist_updated") {
+        // Update the task list when changes are detected in localStorage
+        unloadList();
+    }
+});
+//unloadList()

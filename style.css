@@ -70,7 +70,7 @@ ul li{
     padding: 12px 10px 12px 50px;
     user-select: none;
     list-style: none;
-    cursor: pointer;
+    cursor: grab;
     background-color: #fff;
     color: black;
     border-radius: 12px;
